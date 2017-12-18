@@ -9,10 +9,15 @@ const initialState = {
 
 export const guessesReducer = (state=initialState, action) => {
  if (action.type === ADD_GUESS) {
-    return Object.assign({}, state, state.guesses = [...state.guesses, action.number] )
+     //merging the new object with the previous state and it contains just the guesses property
+    return Object.assign({}, state, {guesses: [...state.guesses, action.number]} )
         
+} else if (action.type === RANDOM_ANSWER) {
+    return Object.assign({}, state, {correctAnswer: action.number})
+} else if (action.type === SHOW_FEEDBACK) {
+    return Object.assign({}, state, {feedback: action.feedback})
 }
-    else return state
+else return state
  
 }
 

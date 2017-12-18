@@ -5,7 +5,7 @@ export const RANDOM_ANSWER = 'RANDOM_ANSWER'; //random number generated at game 
 
 export const showFeedback = (feedback) => ({
     type: SHOW_FEEDBACK,
-    text: ''
+    feedback
 });
 
 export const addGuess = number => ({
@@ -22,3 +22,4 @@ export const randomAnswer = () => {
     }
 
 }
+
