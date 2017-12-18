@@ -1,8 +1,9 @@
 export const SHOW_FEEDBACK = 'SHOW_FEEDBACK'; //hotter/colder etc.
 export const ADD_GUESS = 'ADD_GUESS'; //tracking last guess
 export const RANDOM_ANSWER = 'RANDOM_ANSWER'; //random number generated at game start
+export const AURAL_UPDATE = 'AURAL_UPDATE';
 
-
+//actions can have impure functions but reducers should be pure unless absolutely necessary
 export const showFeedback = (feedback) => ({
     type: SHOW_FEEDBACK,
     feedback
@@ -20,6 +21,11 @@ export const randomAnswer = () => {
         type: RANDOM_ANSWER,
         number 
     }
-
 }
 
+export const auralUpdate = () => {
+    
+    return {
+        type: AURAL_UPDATE,
+    }
+}
