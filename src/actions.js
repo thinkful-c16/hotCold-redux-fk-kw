@@ -10,10 +10,15 @@ export const showFeedback = (feedback) => ({
 
 export const addGuess = number => ({
     type: ADD_GUESS,
-    number: null
+    number
 });
 
-export const randomAnswer = number => ({
-    type: RANDOM_ANSWER,
-    number: null
-});
+
+export const randomAnswer = () => {
+    const number = Math.round(Math.random() * 100) + 1
+    return {
+        type: RANDOM_ANSWER,
+        number 
+    }
+
+}
